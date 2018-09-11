@@ -10,7 +10,7 @@ app.set('port', port);
 const server = http.createServer(app);
 
 server.listen(port);
-server.on('error',onError);
+server.on('error', onError);
 server.on('listening', onListening);
 
 // Validar se o script rodou
@@ -42,7 +42,7 @@ function onError(error) {
         ? 'Pipe ' + port
         : 'Port ' + port;
 
-    switch(error.code){
+    switch (error.code){
         case 'EACCES':
             console.error(bind + ' requires elevated privileges');
             process.exit(1);
